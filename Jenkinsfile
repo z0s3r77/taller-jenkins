@@ -4,7 +4,7 @@ pipeline{
 	stages {
 	stage('Obtener el repositorio') {
 		steps {
-			git branch: 'main', url: 'https://github.com/z0s3r77/taller-openwebinars'
+			git branch: 'main', url: 'https://github.com/z0s3r77/taller-jenkins'
 		}
 
 	}
