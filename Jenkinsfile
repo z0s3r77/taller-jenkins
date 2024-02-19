@@ -23,6 +23,14 @@ pipeline{
 	
 	}
 
+	stage('Análisis estático') {
+            steps {
+                sh 'make cppcheck-xml'
+                recordIssues enabledForFailure: true, failOnError: true, qualityGates: [[threshold: 1, type: 'TOTAL', unstable: false]], tools: [cppCheck(pattern: 'reports/cppcheck/*.xml')]
+            }
+        }
+
+
 	   post {
         success {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'html/', reportFiles: 'files.html', reportName: 'Documentación', reportTitles: ''])
