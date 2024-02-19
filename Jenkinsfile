@@ -31,6 +31,14 @@ pipeline{
 
 
 
+stage('Tests unitarios') {
+            steps {
+                sh 'make tests-xml'
+                junit 'reports/cmocka/*.xml'
+            }
+        }
+
+
 	
 	}
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite name="is_armstrong_number_tests" time="0.000" tests="2" failures="0" errors="0" skipped="0" >
+    <testcase name="test_is_armstrong_number_returns_true" time="0.000" >
+    </testcase>
+    <testcase name="test_is_armstrong_number_returns_false" time="0.000" >
+    </testcase>
+  </testsuite>
+</testsuites>
